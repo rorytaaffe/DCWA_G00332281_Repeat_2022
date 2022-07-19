@@ -1,0 +1,27 @@
+<style>
+    table, th, td { border: 1px solid black }
+</style>
+
+<h1>Students studying <%= mid%></h1>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>GPA</th>
+    </tr>
+    <% students.forEach((student)=> { %>
+        <tr>
+            <td>
+                <%= student.sid %>
+            </td>
+            <td>
+                <%= student.name %>
+            </td>
+            <td>
+                <%= student.gpa %>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<a href="http://localhost:3000/">Home</a> <br>

@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <h1>Add Student</h1>
+    <% if (errors !=undefined) { %>
+        <ul>
+            <% errors.forEach((error)=> { %>
+                <li>
+                    <%= error.msg %>
+                </li>
+                <% }) %>
+        </ul>
+        <% } %>
+            <form action="/addStudents" method="POST">
+                <label>Student ID:</label>
+                <input type="text" name="sid"> <br>
+                <label>Student Name:</label>
+                <input type="text" name="name"><br>
+                <label>GPA</label>
+                <input type="number" name="gpa"><br>
+                <input type="submit" value="Add Student">
+            </form>
+            <br>
+            <a href="http://localhost:3000/">Home</a> <br>
+</body>
+
+</html>

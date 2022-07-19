@@ -1,0 +1,27 @@
+<style>
+    table, th, td { border: 1px solid black }
+</style>
+<h1>Lecturers</h1><br>
+<button onclick='window.location.href="http://localhost:3000/addLecturers"'>Add Lecturer</button>
+<table>
+    <tr>
+        <th>Lecturer ID </th>
+        <th>Name </th>
+        <th>Dept </th>
+    </tr>
+    <% listLect.forEach((lecturers)=> { %>
+        <tr>
+            <td>
+                <%= lecturers._id %>
+            </td>
+            <td>
+                <%= lecturers.name %>
+            </td>
+            <td>
+                <%= lecturers.dept %>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<a href="http://localhost:3000/">Home</a> <br>

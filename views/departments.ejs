@@ -1,0 +1,23 @@
+<style>
+    table, th, td { border: 1px solid black }
+</style>
+<h1>Departments</h1><br>
+<table>
+    <tr>
+        <th>Department ID </th>
+        <th>Name </th>
+    </tr>
+
+    <% depts.forEach((dept)=> { %>
+        <tr>
+            <td>
+                <%= dept.did %>
+            </td>
+            <td>
+                <%= dept.name %>
+            </td>
+        </tr>
+        <% }) %>
+</table>
+
+<a href="http://localhost:3000/">Home</a> <br>

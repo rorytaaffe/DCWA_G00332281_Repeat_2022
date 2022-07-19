@@ -1,0 +1,25 @@
+<style>
+    table, th, td {
+        border: 1px solid black
+    }
+</style>
+<h1>Students</h1><br>
+<button onclick='window.location.href="http://localhost:3000/addStudents"'>Add Student</button>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>GPA</th>
+        <th>Action</th>
+    </tr>
+    <% students.forEach((student)=> { %>
+        <tr>
+            <td><%= student.sid %></td>
+            <td><%= student.name %></td>
+            <td><%= student.gpa %></td>
+            <td><a href="http://localhost:3000/students/delete/<%= student.sid %>">Delete</a></td>
+        </tr>
+    <% }) %>
+</table>
+
+<a href="http://localhost:3000/">Home</a> <br>
